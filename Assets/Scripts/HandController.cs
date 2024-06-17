@@ -14,6 +14,8 @@ public class HandController : MonoBehaviour
 
     void Update() => CheckGripInput();
 
+    public void EnableHandRenderer() => handRenderer.enabled = true;
+
     void CheckGripInput()
     {
         var wasHeldPreviously = gripTriggerIsHeld;
@@ -61,7 +63,7 @@ public class HandController : MonoBehaviour
     void OnRelease()
     {
         if (!currentlyHeldObject) return;
-        currentlyHeldObject.Release();
+        currentlyHeldObject.Release(this);
         currentlyHeldObject = null;
         handRenderer.enabled = true;
     }
