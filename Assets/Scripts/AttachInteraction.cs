@@ -7,12 +7,14 @@ public class AttachInteraction : MonoBehaviour
     [SerializeField] AudioClip successClip;
     [SerializeField] AudioSource audioSource;
     [SerializeField] InstructionData initialInstruction, completedInstruction;
-    [SerializeField] UIPanelController uiController;
+    
+    public delegate void OnUpdateInstructions(InstructionData data);
+    public static event OnUpdateInstructions onUpdateInstructionData;
     
     void Start()
     {
         StartCoroutine(WaitForAttach());
-        uiController.SetInstructions(initialInstruction);
+        onUpdateInstructionData?.Invoke(initialInstruction);
     }
 
     IEnumerator WaitForAttach()
@@ -22,8 +24,8 @@ public class AttachInteraction : MonoBehaviour
             yield return null;
         }
         
+        onUpdateInstructionData?.Invoke(completedInstruction);
         PlaySuccessAudio();
-        uiController.SetInstructions(completedInstruction);
     }
 
     void PlaySuccessAudio()
