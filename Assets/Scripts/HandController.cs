@@ -4,6 +4,7 @@ using UnityEngine.XR;
 public class HandController : MonoBehaviour
 {
     [SerializeField] XRNode xrNode;
+    [SerializeField] private SkinnedMeshRenderer handRenderer;
     InputDevice handInputDevice;
     float gripTriggerValue;
     bool gripTriggerIsHeld;
@@ -54,6 +55,7 @@ public class HandController : MonoBehaviour
         if (!currentlyTouchingObject) return;
         currentlyHeldObject = currentlyTouchingObject;
         currentlyHeldObject.Grab(this);
+        handRenderer.enabled = false;
     }
 
     void OnRelease()
@@ -61,5 +63,6 @@ public class HandController : MonoBehaviour
         if (!currentlyHeldObject) return;
         currentlyHeldObject.Release();
         currentlyHeldObject = null;
+        handRenderer.enabled = true;
     }
 }

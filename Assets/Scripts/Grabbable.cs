@@ -17,7 +17,7 @@ public class Grabbable : MonoBehaviour
 
     public void Release()
     {
-        rigidBody.isKinematic = true; // for testing
+        rigidBody.isKinematic = false; 
         transform.SetParent(null);
     }
 }
