@@ -1,15 +1,26 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 public class Grabbable : MonoBehaviour
 {
     Rigidbody rigidBody;
-    private HandController currentHoldingHand;
+    Collider grabbableCollider;
+    HandController currentHoldingHand;
     bool isHeld;
 
-    void Start() => rigidBody = GetComponent<Rigidbody>();
+    void Start()
+    {
+        rigidBody = GetComponent<Rigidbody>();
+        grabbableCollider = GetComponent<Collider>();
+    }
 
     public bool IsHeld() => isHeld;
+
+    public void SetGrabbableEnabled(bool isEnabled)
+    {
+        grabbableCollider.enabled = isEnabled;
+    }
 
     public void SetHoldingHand(HandController holdingHand)
     {

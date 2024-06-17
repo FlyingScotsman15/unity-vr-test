@@ -10,8 +10,6 @@ public class Attachable : MonoBehaviour
     [Tooltip("This is the point on this object you are using as the connection to the intended attach target")]
     [SerializeField] Transform connectionPointTransform;
     [SerializeField] private AttachDistance attachDistance;
-    [SerializeField] AudioSource successSoundAudioSource;
-    [SerializeField] AudioClip successClip;
     bool isCurrentlyHeld;
     Grabbable grabbable;
 
@@ -27,9 +25,8 @@ public class Attachable : MonoBehaviour
     {
         transform.SetParent(attachTargetTransform);
         grabbable.SetHoldingHand(null);
+        grabbable.SetGrabbableEnabled(false);
         IsAttached = true;
-        if (!successSoundAudioSource) return;
-        successSoundAudioSource.PlayOneShot(successClip);
     }
 
     private bool IsAbleToAttach()
