@@ -842,7 +842,6 @@ GameObject:
   - component: {fileID: 79245832}
   - component: {fileID: 79245831}
   - component: {fileID: 79245830}
-  - component: {fileID: 79245829}
   m_Layer: 0
   m_Name: Hand 2
   m_TagString: Untagged
@@ -850,19 +849,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
   m_IsActive: 1
---- !u!65 &79245829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79245828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &79245830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1182,6 +1168,7 @@ GameObject:
   - component: {fileID: 278612135}
   - component: {fileID: 278612136}
   - component: {fileID: 278612137}
+  - component: {fileID: 278612138}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -1235,6 +1222,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xrNode: 4
+--- !u!65 &278612138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278612134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07, y: 0.15, z: 0.19}
+  m_Center: {x: 0.02, y: 0, z: 0.09}
 --- !u!1 &286753136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,11 +1277,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286753136}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.35, z: 1}
+  m_Center: {x: 0.62, y: 0, z: 0}
 --- !u!23 &286753139
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1693,6 +1693,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 411447873}
+  - component: {fileID: 411447876}
+  - component: {fileID: 411447875}
+  - component: {fileID: 411447874}
   m_Layer: 0
   m_Name: Drill Bit
   m_TagString: Untagged
@@ -1715,6 +1718,47 @@ Transform:
   m_Father: {fileID: 1866490664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411447874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411447872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a1198a6e60354e876fbdf835fc3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &411447875
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411447872}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &411447876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411447872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.54, y: 1, z: 8.42}
+  m_Center: {x: 0, y: 0, z: 1.92}
 --- !u!1001 &505667583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3172,6 +3216,7 @@ GameObject:
   - component: {fileID: 1093528928}
   - component: {fileID: 1093528929}
   - component: {fileID: 1093528930}
+  - component: {fileID: 1093528931}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -3225,6 +3270,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xrNode: 5
+--- !u!65 &1093528931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093528927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07, y: 0.15, z: 0.19}
+  m_Center: {x: -0.02, y: 0, z: 0.09}
 --- !u!1 &1095675116
 GameObject:
   m_ObjectHideFlags: 0
@@ -9418,6 +9476,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4043099942304013392}
+  - component: {fileID: 3697500741114431213}
+  - component: {fileID: 3697500741114431212}
+  - component: {fileID: 3697500741114431211}
   m_Layer: 0
   m_Name: Drill
   m_TagString: Untagged
@@ -9425,6 +9486,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3697500741114431211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3697500741114431210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.77, y: 11.66, z: 10.92}
+  m_Center: {x: 0, y: 11.19, z: -1.56}
+--- !u!54 &3697500741114431212
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3697500741114431210}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3697500741114431213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3697500741114431210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a1198a6e60354e876fbdf835fc3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3725444891430924077
 Transform:
   m_ObjectHideFlags: 0
