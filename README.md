@@ -6,6 +6,10 @@
 * If dropped have the objects respawn on the table.
 * Have visual and audio cues for completing the attach.
 
+**Notes:**
+
+I used an earlier project of mine as the base scene for this coding test. The original project can be found here: https://github.com/RyanMurdoch1/Lighting_Example
+
 **Approach:**
 
 Create modular components that have clear responsibilities and that are scalable and user friendly.
