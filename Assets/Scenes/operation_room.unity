@@ -1231,12 +1231,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 278612134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd260f980954b045a39ee37b86c7539, type: 3}
+  m_Script: {fileID: 11500000, guid: f51ec585f0a4f6349a77285fc8c707cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xrNode: 4
-  gripTriggerValue: 0
-  gripTriggerIsHeld: 0
 --- !u!1 &286753136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,6 +3171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1093528928}
   - component: {fileID: 1093528929}
+  - component: {fileID: 1093528930}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -3213,6 +3212,19 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!114 &1093528930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093528927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51ec585f0a4f6349a77285fc8c707cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrNode: 5
 --- !u!1 &1095675116
 GameObject:
   m_ObjectHideFlags: 0
